@@ -665,7 +665,6 @@ h1, h2, h3, h4, h5, h6, figure {
   opacity: 0;
 }
 
-/*# sourceMappingURL=style.css.map */
 /*====================================================
                 Mine Custom Styles
 ====================================================*/
@@ -720,31 +719,30 @@ h1, h2, h3, h4, h5, h6, figure {
 
   #search input[type=text] {
     float: left;
-    width: 90%;
+    width: 85%;
 
   }
   
   /* Style the submit button */
-  #search button {
+  #search i {
     float: left;
-    width: 10%;
-    margin-top: 5px; 
+    width: 15%;
+    margin-top: 10px; 
     padding: 10px;
-    background: none;
     color: #2d6cdf;
-    font-size: 17px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-  }
-
-  #search button:hover{
-    color: black;
-    text-shadow: 3px 1px rgb(192, 192, 192);
+    text-shadow: 2px 1px rgb(192, 192, 192);
   }
 
   .btn-outline-primary:hover, .btn-outline-info:hover, .btn-outline-secondary:hover, .btn-outline-danger:hover, .btn-outline-success:hover {
     color: white;
     font-weight: bold;
+  }
+
+  .required{
+    color: red;
+  }
+
+  thead {
+    font-size: 2rem;
   }
   

@@ -1,0 +1,44 @@
+<div class="row">
+    <div id="title" class="col-md-12 text-center mt-5">
+        <h1>{{pageTitle}}</h1>
+        <hr/>
+    </div>
+</div>
+<div id="form" class="container mt-5 mb-5">
+<form [formGroup]="userform" (ngSubmit) = "onSubmit()">
+    <div class="row form-group mt-5">
+        <div class="col">
+            <label for="fname">Firstname<span class="required">*</span></label>
+            <input type="text" formControlName="fname" class="form-control" [(ngModel)]="user.fname" placeholder="John" required>
+        </div>
+        <div class="col">
+            <label for="lname">Lastname<span class="required">*</span></label>
+            <input type="text" formControlName="lname" class="form-control" [(ngModel)]="user.lname" placeholder="Wick" required>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col">
+            <label for="dob">Date of Birth<span class="required">*</span></label>
+             <input type="date" class="form-control" formControlName="dob" [(ngModel)]="user.dob" required>
+        </div>
+        <div class="col">
+            <label for="email">Email<span class="required">*</span></label>
+              <input type="email" class="form-control" formControlName="email" [(ngModel)]="user.email" placeholder="johnwick@example.com" required>
+        </div>  
+    </div>
+    <div class="form-group">
+      <label for="address">Address<span class=required>*</span></label>
+      <input type="text" class="form-control" formControlName="address" [(ngModel)]="user.address" placeholder="123 Main St" required>
+    </div>
+    <div class="form-group text-center mt-5">
+        <button type="submit" [hidden]="efbtn" class="btn btn-outline-success mb-2" (click)="onSubmit()"><i class="fa fa-plus"></i> Add</button>
+        <button type="submit" [hidden]="!efbtn" class="btn btn-outline-success mb-2" (click)="onSubmit()"><i class="fa fa-sync"></i> Update</button>
+        <button [hidden]="!efbtn" class="btn btn-outline-danger" (click)="onDelete()"><i class="fa fa-trash"></i> Delete</button>
+        <button class="btn btn-outline-primary mb-2" [routerLink]="['/users']"><i class="fa fa-times"></i> Cancel</button>
+    </div>
+  </form>
+</div>
+
+<div *ngIf="error">
+    <h1>{{error}}</h1>
+</div>

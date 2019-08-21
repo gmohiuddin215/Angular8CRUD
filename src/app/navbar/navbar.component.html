@@ -8,9 +8,9 @@
                 </div>
                 <div class="col-xs-10 text-right menu-1">
                     <ul>
-                        <li><a routerLink="/users" routerLinkActive="active">Users</a></li>
-                        <li><a routerLink="/adduser" routerLinkActive="active">Add User</a></li>
-                        <li><a routerLink="#" routerLinkActive="active">Edit User</a></li>
+                        <li><a [routerLink]="['/users']" [routerLinkActive]="['active']">Users</a></li>
+                        <li><a [routerLink]="['/adduser']" routerLinkActive="active">Add User</a></li>
+                        <li><a [routerLink]="['']" [routerLinkActive]="['active']">Edit User</a></li>
                     </ul>
                 </div>
             </div>				
